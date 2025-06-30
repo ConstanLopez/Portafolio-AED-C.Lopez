@@ -1,0 +1,89 @@
+UNIDAD TEMÁTICA 4: Arboles Binarios
+PRACTICOS DOMICILIARIOS INDIVIDUALES - FORMULACION DE
+SEUDOCÓDIGO
+
+
+Ejercicio #1
+Dada la siguiente lista de claves, insértelas en un ÁRBOL BINARIO DE BÚSQUEDA, siguiendo el
+seudocódigo de inserción indicado en material de lectura “arboles_binarios.pdf”.
+T,Y,U,P,L,K,J,S,A,Z,X,C,V,N
+¿Cuál de las siguientes afirmaciones es correcta?
+a) El árbol tiene altura 7.
+b) “Y” es ancestro de “C”.
+c) “X” es descendiente de “P”.
+d) “S” es una hoja.
+
+La respuesta correcta es la d) S es una hoja
+             T
+           /   \
+         P       Y
+        / \     / \
+      L   S   U   Z
+     / \       \
+    K   N       X
+   /           /
+  J           V
+ /
+A
+ \
+  C
+
+
+En el árbol resultante (indica la respuesta correcta y analiza por qué las demás no lo son):
+a) El árbol tiene cinco hojas.
+b) “V” es descendiente de “S”
+c) “K” es hermano de “J”
+d) “A” y “X” están al mismo nivel
+
+La respuesta correcta es la a) El árbol tiene cinco hojas {C,N,S,V,Z}
+
+Para imprimir las claves en orden lexicográfico basta con (indica la respuesta correcta y analiza
+por qué las demás no lo son)
+a) recorrer el árbol en PREORDEN. Recorrido: T,P,L,K,J,A,C,N,S,Y,U,X,V,Z
+b) recorrer el árbol en POSTORDEN. Recorrido: C,A,J,K,N,L,S,P,V,X,U,Z,Y,T
+c) recorrer el árbol en INORDEN. Recorrido:   A,C,J,K,L,N,P,S,T,U,V,X,Y,Z
+d) debe recorrerse el árbol POR NIVELES.
+
+La respuesta correcta, es INORDEN
+
+Ejercicio #2
+El siguiente algoritmo,
+MiFunción : devuelve un tipo entero
+Comienzo
+ A <- -1; B <- -1
+ Si HijoIzquierdo <> nulo entonces
+ A <- HijoIzquierdo.MiFunción
+ Fin Si
+ Si HijoDerecho <> nulo entonces
+ B <- HijoDerecho.MiFunción
+ Fin Si
+ Devolver máximo(A,B) +1
+Fin
+
+1. Este algoritmo, aplicado a la raíz de un árbol, devuelve:
+a) La altura del árbol.
+b) El valor de la expresión aritmética contenida en el árbol.
+c) El grado del árbol.
+d) El tamaño del árbol.
+
+La opcion correcta es a) Devuelve la áltura del árbol
+
+2. El orden del tiempo de ejecución del algoritmo (analízalo cuidadosamente) es:
+a) O(n)
+b) O(1)
+c) O(log2n)
+d) O(n2)
+
+La respuesta correcta  a)
+
+
+
+
+
+Ejercicio #3
+Dado un árbol binario de búsqueda inicialmente vacío, realiza las siguientes operaciones:
+1. Inserta las claves 12, 25, 14, 1, 33, 88, 45, 2, 7, 66,5, 99
+a. Escribe los recorridos en Preorden, Inorden y Postorden
+2. A partir del árbol final, elimina (dibujando paso a paso) las siguientes claves:
+99, 2, 12, 33
+a. Escribe los recorridos en Preorden, Inorden y Postorden

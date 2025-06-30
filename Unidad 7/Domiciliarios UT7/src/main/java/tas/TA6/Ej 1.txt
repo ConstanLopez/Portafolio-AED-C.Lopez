@@ -1,0 +1,14 @@
+1. Desarrollar en lenguaje natural y seudocódigo de alto nivel un
+algoritmo sencillo que permita determinar si ungrafo contiene ciclos
+
+metodo DetectarCiclos(): Boolean
+    this.visitado(); //Levantamos la bander de que se visito el nodo
+    pilaRecursiva=true // El nodo fue procesado
+
+    para cada adyacente w: //Recorremos  cada adyacente a this
+        si no visitado[w] entonces //Si w aún no fue visitado, lo visitamos recursivamente
+            w.detectarCiclos()
+        sino si pilaRecursiva[w] entonces //Si ya fue visitado y el vértice está todavía en la pila
+            hayCiclo = true      // Entonces hay un arco de retroceso
+
+    enPila[this] ← false //Se termina de procesar

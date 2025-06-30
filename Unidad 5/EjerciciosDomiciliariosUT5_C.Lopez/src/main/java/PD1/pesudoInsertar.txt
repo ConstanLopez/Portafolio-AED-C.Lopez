@@ -1,0 +1,10 @@
+Algoritmo de TNodo Trie agregar(Etiqueta objeto, Etiqueta padreObjeto){
+    si (padreObjeto=="")
+        this.raiz=objeto
+    sino
+     padre = buscar(Etiqueta, padreObjeto)
+     padre.hijos.anadir(Etiqueta objeto)
+     Fin si
+    Fin
+
+}

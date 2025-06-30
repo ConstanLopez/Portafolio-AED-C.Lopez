@@ -1,0 +1,143 @@
+EJERCICIO 6
+
+● substring – en todas sus variantes
+    Variante 1) String substring(int beginIndex, int endIndex)
+        Devuelve una nueva string, que comienza desde beginIndex hasta endIndex-1
+        // Código
+            String cadena="hola";
+            System.out.println(cadena.substring(1,3);
+          //Esto imrpimiría en pantall "ol"
+
+    Variante 2) String substring(int beginIndex)
+        Devuelve una nueva string que va desde beginIndex hasta el final de la string original
+        String cadena="hola";
+                    //Código
+                    System.out.println(cadena.substring(1);
+                  //Esto imrpimiría en pantall "ola"
+
+● split – en todas sus variantes
+    Vairante 1) String[] split(String regex)
+        Divide a una String en un Array de substrings usando la regular expression (regex) como separador
+        //Código
+        String  matriz="hola,como,estas";
+                String [] substrings=(matriz.split(","));
+                for (int i = 0; i <substrings.length ; i++)
+                {
+                    System.out.println(substrings[i]);
+                }
+
+    Variante 2)String[] split(String regex, int limit)
+        Es igual a la variante 1 solamente que se agrega un parámetro limit que establece el tamaño del nuevo array
+            limitando los posibles elementos de esta, al parámetro limit
+        //Código
+                String  matriz="hola,como,estas";
+                        String [] substrings=(matriz.split(",",2));
+                        for (int i = 0; i <substrings.length ; i++)
+                        {
+                            System.out.println(substrings[i]);
+                        }
+● subSequence
+    CharSequence subSequence(int beginIndex, int endIndex)
+        Devuelve una nueva secuencia de chars desde beginIndex hasta endIndex -1
+        //Código
+        String  cadena="holacomo";
+                    System.out.println(cadena.substring(1,5));
+
+● trim
+    String trim()
+        Devuelve una copia de la cadena, sin espacios en blanco
+        //Código
+        String  cadena="    hola como estas      ";
+                    System.out.println(cadena.trim());
+
+● toLowerCase
+    String toLowerCase()
+        Devuelve una copia de la cadena con todas las letras en minusuclas.
+
+● toUpperCase
+    String toUpperCase()
+        Devuelve una copia de la cadena con todas las letras en mayusculas.
+             String  cadena="HOLA";
+                        System.out.println(cadena.toLowerCase());
+
+● indexOf – en todas sus variantes, que son muchas y muy poderosas
+    Variante 1) int indexOf(int ch)
+        Devuelve el índice de la primera ocurrencia del caractér especificado
+        String  cadena="HOLA";
+                    System.out.println(cadena.indexOf("H"));
+
+    Variante 2) int indexOf(int ch, int fromIndex)
+        Devuelve el índice de la primera ocurrencia del caracter especificado desde fromIndex en adelante
+            //Código
+                String  cadena="HOLAH";
+                            System.out.println(cadena.indexOf('H',3));
+
+    Variante 3) int indexOf(String str)
+        Devuelve el índice de la primera ocurrencia de la substring especificada
+            //Código
+                  String  cadena="AHOL";
+                            System.out.println(cadena.indexOf("HOL"));
+
+    Variante 4) int indexOf(String str, int fromIndex)
+        Devuelve el índice de la primera ocurrencia de la substring especificada, desde fromIndex en adelante
+            //Código
+                String  cadena="HOLAHOL";
+                            System.out.println(cadena.indexOf("HOL",3));
+
+● lastIndexOf – ídem
+    Variante 1) int lastIndexOf(int ch)
+        Devuelve el índice de la última ocurrencia del caractér especificado
+        //Código
+            String  cadena="HOLAH";
+                        System.out.println(cadena.lastIndexOf("H"));
+
+    Variante 2) int lastIndexOf(int ch, int fromIndex)
+        Devuelve el índice de la última ocurrencia del caracter especificado desde fromIndex para atrás
+        //Código
+            String  cadena="HOLAH";
+                        System.out.println(cadena.lastIndexOf("H",3));
+
+    Variante 3) int lastIndexOf(String str)
+        Devuelve el índice de la útlima ocurrencia de la substring especificada
+            //Código
+                String  cadena="HOLAHOL";
+                            System.out.println(cadena.lastIndexOf("HOL"));
+
+    Variante 4) int lastIndexOf(String str, int fromIndex)
+            Devuelve el índice de la última ocurrencia de la substring especificada, desde fromIndex hacia atrás
+                //Código
+                    String  cadena="HOLAHOL";
+                                System.out.println(cadena.lastIndexOf("HOL",6));
+
+● contains
+    boolean contains(CharSequence s)
+        Devuelve true si una string sontiene la secuencia de caracteres especificada
+           //Código
+            String  cadena="HOLAHOL";
+                        System.out.println(cadena.contains("HOL"));
+
+● replace– en todas sus variantes
+    Variante 1) String replace(char oldChar, char newChar)
+        Devuelve una nueva string, reemplazando los oldChar por los newChar en la cadena nueva
+        //Código
+             String  cadena="HOLAHOL";
+                        System.out.println(cadena.replace("H","J"));
+
+    Variante 2) String replace(CharSequence target, CharSequence replacement)
+        Devuelve una nueva string, reemplazando la seguencia de caracteres target por replacement
+            //Código
+                String  cadena="HOLAHOL";
+                            System.out.println(cadena.replace("HOL","JAL"));
+
+● replaceAll– en todas sus variantes
+    Variante 1) String replaceAll(String regex, String replacement)
+        Devuelve una string, reemplazando cada substring que matchea la regex con el replacement
+        //Código
+             String  cadena="HOLAHOL";
+                        System.out.println(cadena.replaceAll("HOL","JA"));
+● replaceFirst
+   String replaceFirst(String regex, String replacement)
+    Devuelve una string, reemplazando la primera substring que matchea la regex con el replacement
+        //Código
+            String  cadena="HOLAHOL";
+                        System.out.println(cadena.replaceFirst("HOL","JA"));

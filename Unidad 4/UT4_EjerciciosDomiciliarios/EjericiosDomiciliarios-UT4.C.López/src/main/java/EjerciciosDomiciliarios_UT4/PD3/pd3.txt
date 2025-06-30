@@ -1,0 +1,178 @@
+Ejercicio #1
+Desarrolla un algoritmo (ambas partes, método de Árbol y método de Nodo), para Insertar un
+nuevo Nodo en el Árbol (este nuevo nodo se ha de brindar como parámetro al método del
+Arbol).
+De acuerdo a los lineamientos para desarrollo de algoritmos en seudocódigo presentados en
+clase, deberás desarrollar:
+1. Descripción en lenguaje natural del algoritmo solicitado
+2. Identificación de precondiciones y postcondiciones correspondientes
+3. Escritura del algoritmo en seudocódigo formal
+4. Análisis detallado del orden del tiempo de ejecución del algoritmo
+
+Algoritmo ÁRBOL
+1)El siguiente Algoritmo, inserta un Nodo en el arbol, si el árbol es vació, el nodo insertado es raiz,
+    de lo contrario, se ejecuta el método insertar a la raíz del árbol.
+2)Precondicion:
+  PostCondicion:
+
+3) Algoritmo InsertarABB(nodo Nodo)
+    COM
+    Si raiz <> null ENTONCES //Sentencia de Orden 1
+        raiz=Nodo            //Sentencia de Orden 1
+    Sino
+        raiz.insertar(Nodo)  //Sentencia de Orden n
+    Fin si
+    FIN
+
+4) El orden de tiempo de ejecución del algoritmo es  Orden n O (n)
+
+ALGORITMO Insercción  Nodo ABB
+
+1)El siguiente algoritmo , es instanciado, por un nodo del arbol, y inserta un nodo en el arbol, chequeando la clave del nodo, con los otros nodos del arbol
+    para determinar su inserccion correcta. Si es igual, no lo inserta, ya que ya esta en el arbol, sino si
+
+2) Precondicion
+   PostCondicion
+
+3) Algoritmo insertar Nodo en ABB (nodo nuevoNodo)
+    COM
+    Si this.etiqueta=nuevoNodo.etiqueta ENTONCES
+        SALIR //EL nodo a insertar, ya esta en el árbol (es igual al que estamos comparando)
+    FIN SI
+    Si this.etiqueta<nuevoNodo.etiqueta ENTONCES //O(1)
+       si this.hijoIzq=null ENTONCES            //O(1)
+          hijoIzq=nuevoNodo                     //O(1)
+       sino
+          hijoIzq.insertar(nuevoNodo)            //O(N)
+       FIN SI
+    SINO
+        si hijoDer=null ENTONCES                  //O(1)
+            hijoDer=nuevoNodo                     //O(1)
+        sino
+            hijoDer.insertar(nuevoNodo)           //O(N)
+        FIN SI
+    FIN SI
+   FIN
+
+4)El tiempo de ejecucion es de Orden n O(n)
+
+Ejercicio #2
+
+Desarrolla un algoritmo (ambas partes, método de Arbol y método de Nodo), para contar
+todas las hojas que tiene el Árbol.
+De acuerdo a los lineamientos para desarrollo de algoritmos en seudocódigo presentados en
+clase, deberás desarrollar:
+
+1. Descripción en lenguaje natural del algoritmo solicitado
+2. Identificación de precondiciones y postcondiciones correspondientes
+3. Escritura del algoritmo en seudocódigo formal
+4. Análisis detallado del orden del tiempo de ejecución del algoritmo
+
+1)El siguiente algoritmo, de un ABB cuenta la cantidad total de hojas de un ABB
+
+2)PreCondiciones: Que el árbol, no sea vació
+  PostCondiciones: Que devuelva la cantidad de hojas correcta
+
+3) Algoritmo ARBOL ABB
+Algoritmo Arbol ContarHojas()
+    COM
+    Si raiz<> null
+        raiz.ContarHojas()  //Orden (n)
+    Sino
+        Devolver 0
+    FIN SI
+   FIN
+
+4)El tiempo de ejecución de este algoritmo, es de Orden n O(n)
+
+ALGORITMO NODO
+
+1) Este algoritmo, va recorriendo el arbol, y cuando llega a una hoja, suma 1.
+
+2)Precondicion: Que el arbol no este vacio
+  PostCondicion: Que todas las hojas sean sumadas
+
+3) Algoritmo (nodo) ContarHojas()
+    COM
+    hojasIzq:int
+    hojasDer:int
+    Si hijoIzq=null y hijoDer=null ENTONCES
+        retornar 1
+    FIN SI
+    Si hijoIzq<> null ENTONCES
+       hojasIzq= hijoIzq.ContarHojas()
+    Si hijoDer<> null ENTONCES
+           hijoDer= hijoDer.ContarHojas()
+    FIN SI
+    retornar hojasIzq +hojasDer
+    FIN
+
+4) El tiempo de ejecución de este algoritmo es de orden n
+
+Ejercicio #3
+
+Dado un Árbol binario de búsqueda que almacena elementos con claves de tipo entero
+desarrolla un algoritmo, que Calcule la Suma de las claves de todos los elementos del árbol.
+De acuerdo a los lineamientos para desarrollo de algoritmos en seudocódigo presentados en
+clase, deberás desarrollar:
+1. Descripción en lenguaje natural del algoritmo solicitado
+2. Identificación de precondiciones y postcondiciones correspondientes
+3. Escritura del algoritmo en seudocódigo formal
+4. Análisis detallado del orden del tiempo de ejecución del algoritmo
+
+1) El algoritmo, devuelve la suma total de las claves de todos los nodos del arbol.
+
+2) Precondición: Que el arbol no este vacío
+   PostCondición: Que la suma no sea negativa
+
+3)
+    Algoritmo sumaClavesArbol()
+    COM
+    suma→this.clave
+
+    Si hijoIzq<>null ENTONCES
+        suma→suma+hijoIzq.sumaClavesArbol()
+    Fin si
+
+    Si hijoDer<>null ENTONCES
+        suma→suma+HijoDer.sumaClavesArbol()
+    Fin si
+    retornar suma
+    FIN
+
+4)El orden de ejecucion del algotimo es de Orden n O (n)
+
+Ejercicio #4
+
+Desarrolla un algoritmo que, recibiendo como parámetro un entero que indica un cierto nivel,
+devuelva la cantidad de nodos del árbol que se encuentran en dicho nivel.
+De acuerdo a los lineamientos para desarrollo de algoritmos en seudocódigo presentados en
+clase, deberás desarrollar:
+1. Descripción en lenguaje natural del algoritmo solicitado
+2. Identificación de precondiciones y postcondiciones correspondientes
+3. Escritura del algoritmo en seudocódigo formal
+4. Análisis detallado del orden del tiempo de ejecución del algoritmo
+
+1)El siguiente algoritmo, devuelve la cantidad de nodos, en un cierto nivel, dado el parametro ingresado.
+
+2) Precondicion: Que el parametro, no sea negativo
+   PostCondicion: Que la suma devuelva la cantidad de nodos del nivel inidicado
+
+3) Algoritmo NodosEnUnNivel(nodo, Nodo,int NivelBuscado,nivelActual)
+    COM
+    Si nodo=null
+        Retornar 0
+    Fin si
+    Si nivelBuscado==nivelActual ENTONCES
+        Retornar 1
+    Fin Si
+
+    nodosIzq→NodosEnUnNivel(Nodo.hijoIzq,NivelBuscado,nivelActual +1)
+    nodosDer→NodosEnUnNivel(Nodo.hijoDer,NivelBuscado,nivelActual +1)
+
+    retornar nodosIzq + nodosDer
+    FIN
+
+4)El orden de ejecución de este algoritmo es de Orden n O(n)
+
+

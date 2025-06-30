@@ -1,0 +1,21 @@
+1. Dado el escenario planteado, ¿puede resolverse mediante las estructuras de datos vistas anteriormente (en las
+Unidades Temáticas anteriores – Listas, Colas, Arboles)? (se debe discutir la factibilidad de uso de cada uno de
+los TDA ya vistos en el curso, y describir en forma abstracta cómo se habría de implementar). Para cada uno de
+estos TDA, ¿CUÁLES son sus ventajas y desventajas comparativas con respecto al TRIE implementado?
+
+1-Listas
+    Ventajas: Facil de recorrer e implementar
+    Desventajas: El tiempo de busqueda se vuelve O( n)
+2-Colas
+    Ventajas: Ninguna
+    Desventajas: No permite acceso aleatorio a las palabras, o prefijos en si, ya que funciona  mediante FIFO
+3-Arboles
+    Cada nodo del ABB puede representar una palabra
+    Ventajas: Búsqueda, inserción y recorrido eficientes
+    Desventajas: Para búsquedas de palabras con prefijo común, es menos eficaz que un TRIE.
+
+2. ¿Cuál sería la recomendación del Equipo si el (los) archivos a indizar fueran pequeños (por ejemplo, unas
+decenas de líneas)
+
+La recomendacion seria no usar un TRIE para pocas lineas, ya que no es un TDA tan simple de implementar y
+esta hacho para grandes volumnes de datos

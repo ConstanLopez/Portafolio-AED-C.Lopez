@@ -1,0 +1,82 @@
+Primero, se crea la lista y los elementos
+Lenguaje natural:
+Se crea  una lista vacía lista para agregar elementos.
+Precondiciones:
+
+Postcondiciones:
+Se creo una lista vacía.
+Pseudocodigo:
+crearNuevaLista():
+    lista ← nueva lista vacia
+    devolver lista
+
+2 Insertar un elemento al final de la lista
+
+Lenguaje natural:
+Se agrega un elemento al final de la lista.
+
+Precondiciones:
+La lista no es nula.
+Postcondiciones:
+El nuevo elemento queda insertado al final de la lista.
+
+Pseudocodigo:
+insertarUnElemento(lista, elemento):
+    lista.agregarAlFinal(elemento)
+
+
+3. Buscar un elemento en la lista
+Lenguaje natural:
+Buscar por la clave de un elemento si existe en la lista.
+
+Precondiciones:
+La lista no es nula
+Postcondiciones:
+Se informa si el elemento existe o no en la lista.
+
+Pseudocodigo:
+buscarElementoEnLista(lista, clave):
+    para cada elemento en la lista:
+        si elemento.clave == clave:
+            retornar elemento
+     Si no lo encuentra
+        retornar null
+
+4. Imprimir todos los elementos de la lista
+
+Lenguaje natural:
+Mostrar en la salida todos los elementos de la lista.
+
+Precondiciones:
+La lista no es nula.
+Postcondiciones:
+Todos los elementos fueron impresos en la ejecución del programa.
+
+Pseudocodigo:
+imprimirElementos(lista):
+    para cada elemento en lista:
+        print (elemento)
+    fin para
+
+5. Eliminar un elemento por clave
+
+Lenguaje natural:
+Eliminar un elemento de la lista dado su clave.
+
+Precondiciones:
+La lista no es nuela, pudiendo tener o no el elemento.
+Postcondiciones:
+Si el elemento estaba en la lista, el elemento es eliminado. si no, la lista quedó igual que al comienzo.
+
+Pseudocodigo:
+eliminarElemento(lista, clave):
+    para i desde 0 hasta lista.largo - 1:
+        si lista[i].clave == clave:
+            lista.eliminar(i)
+            break;
+
+
+
+
+
+

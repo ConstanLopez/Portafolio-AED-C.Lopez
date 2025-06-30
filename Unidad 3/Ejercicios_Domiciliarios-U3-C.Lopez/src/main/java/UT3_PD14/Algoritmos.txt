@@ -1,0 +1,36 @@
+
+Seteo de la cola
+maximoCola= 10 // Capacidad maxima de elementos, que soporta la cola
+frenteCola = 0    // posición del primer elemento de la cola
+ExtremoCola = -1    // posición del último elemento de la cola
+elementosEnCola = 0  // cantidad de elementos en la cola
+
+Ejercicio 1
+PoneEnCola(unElemento)
+    Si (elementosEnCola = maximoCola) entonces
+        devolver " La cola esta  llena, no se puede insertar mas elementos."
+    Sino
+        extremoCola = (extremoCola + 1) mod maximoCola
+        cola[extremoCola] = unElemento
+        elementosEnCola = elemenetosEnCola + 1
+    FinSi
+Fin
+
+Ejercicio 2
+Seteo de la Cola
+maximoCola= 10 // Capacidad maxima de elementos, que soporta la cola
+frenteCola = 0    // posición del primer elemento de la cola
+ExtremoCola = -1    // posición del último elemento de la cola
+elementosEnCola = 0  // cantidad de elementos en la cola
+
+QuitaDeCola() Devuelve Elemento quitado
+    Si elementosEnCola = 0 Entonces
+        devolver "Cola vacía, no se puede quitar."
+        devuelve nulo
+    Sino
+        Elemento = cola[frenteCola]
+        frenteCola = (frenteCola + 1) mod MAX
+        elementosEnCola = elementosEnCola - 1
+        Devuelve Elemento
+    FinSi
+Fin

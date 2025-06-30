@@ -1,0 +1,6 @@
+factorial (int n){
+    si (n==0) //caso base O (1)
+        devolver 1    O (1)
+    sino
+        devolver ( n*factorial (n-1)) //caso recursivo O (n)
+}

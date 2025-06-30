@@ -1,0 +1,50 @@
+
+//Ejercicio 1
+Algoritmo insertarIndice(palabra, paginas)
+    nodoActual = this.raiz O(1)
+    Para cada letra en palabra hacer
+        Si (nodoActual.Hijos==null) entonces O(1)
+            nodoActual.Hijos.Insertar(letra)
+        FinSi
+        nodoActual = nodoActual.obtenerHijo(letra) O(n)
+    FinPara
+    Para cada pagina en paginas hacer O(n)
+        Si (pagina no está en nodoActual.paginas) entonces O(1)
+            nodoActual.paginas.add(pagina) O(1)
+        FinSi
+    FinPara
+    nodoActual.esPalabra = true //Se llega al final de la palabra
+Fin
+
+//Ejercicio 2
+
+Algoritmo buscarPaginas(palabra)
+    nodoActual = this.raiz
+    Para cada letra en palabra hacer
+        Si (nodoActual.Hijos==null) entonces
+            devolver "No se encontro la palabra"
+        FinSi
+        nodoActual = nodoActual.obtenerHijo(letra)
+    FinPara
+    Si (nodoActual.esPalabra==true) entonces
+        devolver nodoActual.paginas
+    Sino
+        devolver "No se encontro la palabra"
+    FinSi
+Fin
+
+¿Cuántas comparaciones realiza el algoritmo de búsqueda si el argumento es “Programa”?
+ Se realizan 8 comparaciones, ya que se recorre toda la palabra y tiene 8 letras.
+
+¿Cuántas comparaciones realiza el algoritmo de búsqueda si el argumento es “Proselitismo?
+Se realizan 3, ya que el prefijo pro si esta, pero luego en la cuarta letra no encuentra pros. por lo
+tanto no encuentra proselitismo y sale del algoritmo.
+
+¿Cuántas comparaciones se realizan para insertar la palabra “cazadores”?
+Se realizan nueve comparaciones
+
+¿cuál es la altura del árbol trie resultante?
+La altura es la palabra mas larga, que es programacion, que tiene 12 letras
+
+
+

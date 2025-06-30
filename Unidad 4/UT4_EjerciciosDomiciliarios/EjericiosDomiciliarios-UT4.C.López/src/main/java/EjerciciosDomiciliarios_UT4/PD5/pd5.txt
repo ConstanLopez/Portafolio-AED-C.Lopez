@@ -1,0 +1,174 @@
+//La implementacion en Java, ya esta en las clases de el arbol o del elemento
+
+Ejericicio 1) Obtener la menor clave del árbol.
+
+1. Descripción en lenguaje natural del algoritmo solicitado
+    El siguiente algoritmo, obtiene la menor clave de un arbol Binario de Búsqueda
+2. Identificación de precondiciones y postcondiciones correspondientes
+    PreCondición: Que el árbol, no este vació
+    PostCondicion: Que el algoritmo devuelva la menor clave del arbol
+3. Descripción en lenguaje natural de los casos de prueba correspondientes a cada
+operación
+
+4. Escritura del algoritmo en seudocódigo formal (RECUERDA ESCRIBIR CORRECTAMENTE
+LAS FIRMAS DE LAS OPERACIONES)
+
+    Algoritmo MenorClave Arbol ()
+        COM
+        Si raiz=null
+            Retornar null
+        Sino
+            retornar raiz.BuscarMenorClave()
+         Fin Si
+        FIN
+
+    Algoritmo (nodo) BuscarMenorClave(nodo,Nodo)
+        COM
+        min = Nodo.clave
+        //Arranca el minimo siendo el primer nodo
+        Si hijoIzq<>null ENTONCES
+                minIzq→hijoIzq.BuscarMenorclave()
+                Si min>minIzq
+                    min→minIzq
+                Fin Si
+        Fin Si
+        retornar min //Ya que si no tiene hijo izquierdo, se encuentra en el nodo, con la clave más chica
+        FIN
+5. Análisis detallado del orden del tiempo de ejecución del algoritmo
+
+    El orden de ejecución de este algoritmo, es de Orden n, ya que las llamadas recrusivas, son de Orden (n)
+    y provocan que este sea el resultado del tiempo de ejecución del Algoritmo.
+
+Ejercicio 2. Obtener la mayor clave del árbol.
+1. Descripción en lenguaje natural del algoritmo solicitado
+    El siguiente Algoritmo, devuelve la mayor clave de un Arbol
+
+2. Identificación de precondiciones y postcondiciones correspondientes
+    PreCondición: Que el árbol no este vacío
+    PostCondición: Que devuelva la clave mayór del arbol
+3. Descripción en lenguaje natural de los casos de prueba correspondientes a cada
+operación
+4. Escritura del algoritmo en seudocódigo formal (RECUERDA ESCRIBIR CORRECTAMENTE
+LAS FIRMAS DE LAS OPERACIONES)
+
+Algoritmo MayorClave Arbol ()
+        COM
+        Si raiz=null
+            Retornar null
+        Sino
+            retornar raiz.BuscarMenorClave()
+         Fin Si
+        FIN
+
+    Algoritmo (nodo) BuscarMayorClave()
+        COM
+         Si hijoDer<>null
+            retornar hijoDer.BuscarMayorClave
+         Sino
+            retornar this.clave
+5. Análisis detallado del orden del tiempo de ejecución del algoritmo
+    El tiempo de ejecución de este algoritmo, es de orden n , ya que tiene dos llamadas recursivas y el resto de las
+    instancias es de O(1)
+
+Ejercicio 3) Obtener la clave inmediata anterior a una clave dada (pasada por parámetro)
+
+1. Descripción en lenguaje natural del algoritmo solicitado
+    El siguiente algoritmo, devuelve la clave anterior, a una clave dada
+2. Identificación de precondiciones y postcondiciones correspondientes
+    PreCondicion: Qúe la raíz no sea igual al parametro
+    PostCondicion: Que se devuelva la clave anterior, al parametro propocionado.
+3. Descripción en lenguaje natural de los casos de prueba correspondientes a cada
+operación
+
+    Algoritmo ClaveAnterior Nodo ()
+    COM
+    Si clave <= this.clave Entonces
+            Si hijoIzq <> null Entonces
+                devolver hijoIzq.ClaveAnterior(clave)
+            Sino
+                devolver null
+            Fin Si
+        Sino
+            Si hijoDer <> null Entonces
+                temp = hijoDer.ClaveAnterior(clave)
+                Si temp <> null Entonces
+                    devolver temp
+            Fin Si
+            devolver this.clave
+        Fin Si
+       Fin
+
+4. Escritura del algoritmo en seudocódigo formal (RECUERDA ESCRIBIR CORRECTAMENTE
+LAS FIRMAS DE LAS OPERACIONES)
+5. Análisis detallado del orden del tiempo de ejecución del algoritmo
+
+El orden de tiempo de ejecución del algoritmo es de Orden N, ya que se tiene dos instancias, recursivas, que en
+el peor de los casos, puede ser de Orden n.
+
+Ejercicio 4) . Obtener la cantidad de nodos de un nivel dado (por parámetro)
+    1. Descripción en lenguaje natural del algoritmo solicitado
+    El siguiente algoritmo, devuelve la cantidad de nodos en un nivel dado por parametro
+    2. Identificación de precondiciones y postcondiciones correspondientes
+
+    PreCondicion: Que el nivel sea mayor o igual a 0
+    PostCondición: Que la cantidad de nodos devuelta, sea correcta
+
+    3. Descripción en lenguaje natural de los casos de prueba correspondientes a cada
+    operación
+    4. Escritura del algoritmo en seudocódigo formal (RECUERDA ESCRIBIR CORRECTAMENTE
+    LAS FIRMAS DE LAS OPERACIONES)
+
+     Algoritmo ObtenerCantidadDeNodosEnUnNivel(int nivelDado)
+        Si raiz <> null Entonces
+            devolver raiz.ObtenerCantidadDeNodosEnUnNivel(int nivelDado)
+         Sino
+            devolver 0
+
+    Algoritmo ObtenerCantidadDeNodosEnUnNivel(int nivelDado)
+            Si nivelDado = 0 Entonces
+                devolver 1
+            Sino
+                cantidad = 0
+
+                Si hijoIzq <> null Entonces
+                    cantidad += hijoIzq.CantidadEnNivel(nivel - 1)
+
+                Si hijoDer <> null Entonces
+                    cantidad += hijoDer.CantidadEnNivel(nivel - 1)
+                devolver cantidad
+    5. Análisis detallado del orden del tiempo de ejecución del algoritmo
+
+    El orden de tiempo de ejecucipon del Algoritmo es de Orden n , ya que hay dos llamadas recursivas, que en el
+    peor de los casos su tiempo de ejecución, es de Orden n y el resto de la sentencias, es de Orden 1
+
+Ejercicio 6) Verificar Si el árbol es de búsqueda
+    Algoritmo Arbol EsDeBusqueda()
+        Si raiz <>null Entonces
+            raiz.EsDeBusqueda()
+        Sino
+            devolver false
+        Fin Si
+       Fin
+
+    Algoritmo Nodo EsDeBusqueda
+        COM
+        Si hijoIzq<>null Entonces
+            Si hijoIzq.clave>=this.clave ENTONCES
+               retornar falso
+            Fin Si
+            Si hijoIzq.EsDeBusqueda()=false ENTONCES
+                devolver false
+            Fin Si
+        Fin Si
+        Si hijoDer<>null Entonces
+                    Si hijoDer.clave<=this.clave ENTONCES
+                       retornar false
+                    Fin Si
+                    Si hijoDer.EsDeBusqueda()=false ENTONCES
+                        devolver false
+                    Fin Si
+        Fin Si
+        retornar verdadero
+        Fin
+
+ESTOS MISMOS PSEUDOCODIGOS, YA ESTAN IMPLEMENTADOS EN LAS DISTITNAS CLASES DE TELEMENTOAB O TARBOLBB

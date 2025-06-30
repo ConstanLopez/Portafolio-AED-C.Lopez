@@ -1,0 +1,32 @@
+Algoritmo para obtener el tamaño de un árbol binario de búsqueda.
+
+-Precondiciones: Que el árbol exista y no sea nulo.
+-Postcondiciones: El tamaño del árbol es igual al tamaño de la raíz.
+
+-Casos de prueba:
+*Si el árbol no tiene raíz el tamaño es 0.
+*Si el árbol solo tiene raíz el tamaño es 1.
+*Si el árbol tiene más nodos devuelve el tamaño de la raíz.
+
+Implementación:
+
+ObtenerTamañoElemento
+COM
+    Tamaño <- 1
+    Si hijoIzquierdo <> null
+        Tamaño += hijoIzquierdo.obtenerTamañoElemento
+    Fin Si
+    Si hijoDerecho <> null
+        Tamaño += hijoDerecho.obtenerTamañoElemento
+    Fin Si
+    Devuelve Tamaño
+FIN
+
+ObtenerTamañoÁrbol
+COM
+    Si raíz = nulo
+        Devuelve 0
+    Sino
+        Devuelve raíz.obtenerTamañoÁrbol
+    Fin Si
+FIN

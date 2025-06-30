@@ -1,0 +1,56 @@
+Ejercicio 5.4
+Suponga que T₁(N) = O(F(N)) y T₂(N) = O(F(N)). ¿Cuáles afirmaciones son ciertas?
+a. T₁(N) + T₂(N) = O(F(N)) → Es Verdadera
+b. T₁(N) − T₂(N) = O(F(N)) → Es Verdadera
+c. T₁(N) / T₂(N) = O(1) Es Falsa (puede no estar acotada)
+d. T₁(N) = O(T₂(N)) Es Falsa (pueden no ser comparables directamente)
+Respuesta correcta: a y b
+
+Ejercicio 5.5
+Si se ejecuta un algoritmo O(N) seguido de otro O(N), el coste total es:
+  O(N + N) = O(N)
+
+Ejercicio 5.6
+Agrupación de las funciones dadas por complejidad :
+O(x): x
+O(x²): x²
+O(x³): x³
+O(x⁴): x⁴ + x, x⁴ / (x - 1)
+
+
+Ejercicio 5.12
+El algoritmo toma 0.4 ms para N = 100. ¿Cuánto toma para N = 500?
+
+a. Lineal:
+T(500) = 0.4 × (500 / 100) = 2.0 ms
+
+b. O(N log N):
+T(500) ≈ 2.70 ms
+
+c. Cuadrático :
+T(500) = 10.0 ms
+
+d. Cúbico:
+T(500) = 50.0 ms
+
+Ejercicio 5.13
+a. Sumar dos enteros de N dígitos:
+Tiempo: O(N)
+
+b. Multiplicar dos enteros de N dígitos:
+Tiempo: O(N²)
+
+Ejercicio 5.16
+Un algoritmo tarda 0.5 ms con N = 100. ¿Qué tamaño N’ puede resolverse en 60.000 ms (1 minuto)?
+
+a. Lineal:
+N = (60,000 × 100) / 0.5 = 12,000,000
+
+b. O(N log N):
+N ≈ 550,000
+
+c. Cuadrático:
+N ≈ 34,641
+
+d. Cúbico:
+N ≈ 494

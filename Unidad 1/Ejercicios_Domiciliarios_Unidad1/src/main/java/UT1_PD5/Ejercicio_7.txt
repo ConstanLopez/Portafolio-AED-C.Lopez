@@ -1,0 +1,118 @@
+EJERCICIO 7
+
+¿qué es la clase StringBuilder? ¿para qué sirve?
+    - La clase StringBuilder tiene objetos que son parecidos a los de la clase String, excepto que pueden ser
+        modificados. Internamente estos objetos son tratados como arreglos de charSequence de tamaño variable
+        en cualquier momento el largo y el contenido del arreglo puede ser cambiado invocando métodos
+
+MÉTODOS STRING BUILDER
+
+1)Constructores String Builder
+    1) StringBuilder()
+         //Código
+        Construye un StringBuilder vació, con espacio para 16 elementos
+            StringBuilder cadena=new StringBuilder(16);
+                                System.out.println(cadena.capacity())
+
+    2) StringBuilder(CharSequence cs)
+        Construye un StringBuilder conteniendo los caracteres especificados y 16 elementos vaciós aparte.
+        //Código
+            CharSequence h="h";
+                    StringBuilder cadena=new StringBuilder(h);
+                        System.out.println(cadena);
+
+    3) StringBuilder(int initCapacity)
+            //Código
+
+        Construye un StringBuilder vacío con una capacidad inicial definida
+            StringBuilder cadena=new StringBuilder(12);
+                                System.out.println(cadena.capacity())
+
+    4) StringBuilder(String s)
+        Construye un StringBuilder cuyo valor es inicializado por la string especificada, además crea 16 espacios extra
+        a continuación de la string
+        //Código
+            String h="hola";
+                    StringBuilder cadena=new StringBuilder(h);
+                        System.out.println(cadena);
+
+2) void setLength(int newLength)
+    Establece el largo de la CharSequence, si newLength es menor a length(), los últimos caracteres quedan truncados
+        Si pasa al revés, newLength es más grande que lenght(), caracteres nulos se agregan al final del CharSequence
+        //Código
+            String h="hola";
+                    StringBuilder cadena=new StringBuilder(h);
+                    cadena.setLength(5);
+                        System.out.println(cadena)
+
+3)void ensureCapacity(int minCapacity)
+    Asegura que la capacidad sea por lo menos igual al mínimo especificado
+        //Código
+            String h="hola";
+                    StringBuilder cadena=new StringBuilder(h);
+                    cadena.ensureCapacity(7);
+                    System.out.println(cadena);
+
+4) StringBuilder Append- Se añade el parámetro al StringBuilder. Los datos se convierten en un String antes de que se haga el append
+    StringBuilder append(boolean b)
+    StringBuilder append(char c)
+    StringBuilder append(char[] str)
+    StringBuilder append(char[] str, int offset, int len)
+    StringBuilder append(double d)
+    StringBuilder append(float f)
+    StringBuilder append(int i)
+    StringBuilder append(long lng)
+    StringBuilder append(Object obj)
+    StringBuilder append(String s)
+    //Código de algunos usos
+          String h="hola";
+                StringBuilder cadena=new StringBuilder(h);
+                cadena.append(3);
+                System.out.println(cadena.toString());
+
+5) Insert
+
+    StringBuilder insert(int offset, boolean b)
+    StringBuilder insert(int offset, char c)
+    StringBuilder insert(int offset, char[] str)
+    StringBuilder insert(int index, char[] str, int offset, int len)
+    StringBuilder insert(int offset, double d)
+    StringBuilder insert(int offset, float f)
+    StringBuilder insert(int offset, int i)
+    StringBuilder insert(int offset, long lng)
+    StringBuilder insert(int offset, Object obj)
+    StringBuilder insert(int offset, String s)
+    //Código
+          String h="hola";
+                StringBuilder cadena=new StringBuilder(h);
+                cadena.insert(4,"jfk");
+                System.out.println(cadena.toString());
+
+6) delete
+    Variante 1) StringBuilder delete(int start, int end)
+        Se borra la subsecuencia desde start hasta end-1 en la charSequence del StringBuilder
+           //Código
+             String h="hola";
+                    StringBuilder cadena=new StringBuilder(h);
+                    cadena.insert(4,"jfk");
+                    cadena.delete(4,8);
+                    System.out.println(cadena);
+
+    Variante 2) StringBuilder deleteCharAt(int index)
+        Se borra la subsecuencia localizada en index
+        //Código
+            String h="hola";
+            StringBuilder cadena=new StringBuilder(h);
+            cadena.insert(4,"jfk");
+            cadena.deleteCharAt(4);
+            System.out.println(cadena);
+
+7) reverse
+    StringBuilder reverse()
+        Invierte el orden de la secuencia de caracteres en el StringBuilder
+        //Código
+            String h="hola";
+                    StringBuilder cadena=new StringBuilder(h);
+                    cadena.insert(4,"jfk");
+                    cadena.deleteCharAt(4);
+                    System.out.println(cadena.reverse());

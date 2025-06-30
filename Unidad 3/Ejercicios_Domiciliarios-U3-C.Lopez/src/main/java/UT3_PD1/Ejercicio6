@@ -1,0 +1,40 @@
+Ejercicio #6
+
+Escenario:
+Se desea llevar un registro de asistencia de un cierto curso universitario, el cual contará con
+una cantidad no determinada inicialmente de alumnos. Para ello, se ha decidido utilizar una
+lista para representar los alumnos en este curso.
+Cada elemento de la lista entonces tendrá un identificador del alumno y un campo que se ha
+de incrementar cada vez que el alumno concurra a una clase. También se desea registrar el
+total de clases impartidas en el curso, y con este dato luego para cada alumno obtener el
+porcentaje de asistencia a las clases.
+Las listas pueden implementarse físicamente de dos formas básicas: utilizando un array, o
+armando una lista encadenada. Se desea la opinión experta de tu Equipo para determinar qué
+utilizar para resolver eficientemente el problema planteado.
+
+a) ¿Cuál es el costo de memoria en cada caso?
+b) ¿Cuáles son las consideraciones que tu Equipo haría referentes a la cantidad de
+alumnos del curso que soporta cada tipo de estructura? (puedes considerar que, como
+en la UCU, las inscripciones al curso suelen estar habilitadas desde varias semanas
+antes de empezar el curso hasta dos semanas después de haber comenzado)
+
+Parte a)
+    En el primer caso de Implementar un ArrayList el costo de memoria es:
+        -El espacio de memoria usada para la creación del Array
+        -El costo de memoria de redimensionar el array, ya que no se la cantidad de alumnos
+        -La cantidad de n elementos
+
+    En el otro caso de implementar una LinkedList, el costo de memoria es:
+        -N elementos
+        -N referencias al elemento contiguo
+
+Parte b)
+    Consideraciones ArrayList:
+        -Se puede armar una lista, con una cantidad determinada de alumnos, luego de la inscripciones
+        -Al tener una cantidad determinada de alumnos, quizas no ocasionas problemas en baja/altas de alumnos en
+            las inscripciones.
+
+    Consideraciones LinkedList:
+        -Se puede ir agregando a los alumnos a medida que se anoten, en lugar de gastar memoria sin saber cuántos
+            alumnos hay.
+        -No me tengo que preocupar de la redimensión como en el Array

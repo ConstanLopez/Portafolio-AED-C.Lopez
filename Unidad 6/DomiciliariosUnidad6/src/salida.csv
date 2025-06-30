@@ -1,0 +1,6 @@
+algoritmo,tiempo,memoria
+MedicionBuscarTrie,19900,0
+MedicionBuscarTrieArray,22800,0
+algoritmo,tiempo,memoria
+MedicionBuscarTrie,13800,2023
+MedicionBuscarTrieArray,26700,2152

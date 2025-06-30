@@ -1,0 +1,59 @@
+Ejercicio 1
+
+Algoritmo Union(A, B)
+Precondición: listas A y B ordenadas sin duplicados
+Postcondición: lista C con la unión de A y B, ordenada sin duplicados
+
+Algoritmo Union(A, B)
+i = 0
+j = 0
+C = lista vacía
+Mientras i < longitud(A) y j < longitud(B) hacer
+    Si A[i] < B[j] entonces
+        Agregar A[i] a C
+        i = i + 1
+    Sino
+        si A[i] > B[j] entonces
+            Agregar B[j] a C
+            j = j + 1
+    Sino
+        si A[i] == B[j]
+            Agregar A[i] a C
+            i = i + 1
+            j = j + 1
+FinMientras
+
+Mientras i < longitud(A) hacer
+    Agregar A[i] a C
+    i = i + 1
+
+Mientras j < longitud(B) hacer
+    Agregar B[j] a C
+    j = j + 1
+Retornar C
+FinAlgoritmo
+
+Interseccion(A, B)
+Precondición listas A y B ordenadas sin duplicados
+Postcondición: lista C con la intersección de A y B
+
+i = 0
+j = 0
+C = lista vacía
+
+Mientras i < longitud(A) y j < longitud(B) hacer
+    Si A[i] < B[j] entonces
+        i = i + 1
+    Sino
+        si A[i] > B[j] entonces
+        j = j + 1
+    Sino
+        si A[i] == B[j]
+        Agregar A[i] a C
+        i = i + 1
+        j = j + 1
+Retornar C
+FinAlgoritmo
+
+COMPLEJIDAD DEL ALGORITMO
+El orden de ejecución de ambos algoritmos es O(n + m), siendo n la longitud de A y m la longitud de B.

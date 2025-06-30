@@ -1,0 +1,6 @@
+2) Caminos posibles entre Montevideo y Porto Alegre
+- Montevideo, Porto Alegre (CTotal = 1000)
+- Montevideo, Buenos Aires, Porto Alegre (CTotal = 1450)
+- Montevideo, Buenos Aires, Asunción, Porto Alegre (CTotal = 2500)
+- Porto Alegre, Montevideo (CTotal = 1000)
+- Porto Alegre, Asunción, Buenos Aires, Montevideo (CTotal = 2500)

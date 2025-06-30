@@ -1,0 +1,18 @@
+hashCode() para Object:
+    La implementación de hashCode()  para Object devuelve un código hash a partir de la dirección de memoria del
+    objeto
+    Según la documentacion de java hashCode() devuelve un entero que generalmente
+     es único para cada objeto durante su existencia en memoria.
+
+hashCode() para Integer:
+    La diferencia, es que aca el HashCode es el propio Integer
+        Ej: 42.hashCode()→//42
+
+hashCode () para String:
+    El hashcode() de una string, se calcula con el siguiente polinomio:
+        s[0]*31ⁿ⁻¹ + s[1]*31ⁿ⁻² + ... + s[n-1]
+
+    -Se usa porque:
+        Es primo.
+        Es barato de calcular.
+        Da buenos resultados de dispersión en tablas hash.

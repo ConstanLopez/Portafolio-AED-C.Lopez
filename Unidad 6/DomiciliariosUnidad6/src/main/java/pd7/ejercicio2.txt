@@ -1,0 +1,71 @@
+La estructura interna de un HashMap<K, V> se basa en un Array de "buckets",
+    (siendo los buckets posiciones del arreglo interno donde se almacenan los nodos)
+
+Node<K,V>[] table;
+Es el arreglo principal donde se guardan las entradas del HashMap.
+Cada posición es un bucket como esta aclarado arriba , y el índice se calcula con el hashCode() de la clave.
+
+Cada bucket puede contener una lista enlazada o un árbol
+    Si varias claves caen en el mismo bucket (colisión), se agrupan en ese bucket.
+    Inicialmente, se guarda como lista enlazada de nodos, si el arreglo e muy grande y hay muchas colisiones, se convierte
+        en un arbol rojo-negro
+
+Cuándo hacemos put de algún par clave-valor:
+    Se calcula el hashCode de la clave.
+        int hash = (clave == null) ? 0 : clave.hashCode() ^ (clave.hashCode() >>> 16)
+    Ese hash se transforma para mejor distribución:
+        int index = hash % table.length;
+    Luego:
+        Si ese bucket está vacío entonces crea un nodo ahí.
+        Si ya hay una lista/cadena de nodos:
+        Compara claves (equals())
+        Si existe entonces actualiza el valor
+        Si no entonces agrega al final de la lista
+        Si hay muchas colisiones entonces  transforma la lista en árbol
+
+Cuándo hacemos get
+    Calcula el hash y el índice del bucket.
+    Busca en la lista o árbol del bucket.
+    Compara claves con .equals() hasta encontrar la deseada
+
+Qué pasa cuando insertamos
+• Hola
+• HolaMundo
+• HashMap
+• Colecciones
+
+Primero se calcula el hashCode de cada palabra:
+• Hola.hashCode() → 2324737
+• HolaMundo.hashCode() → -2124189365
+• HashMap.hashCode() -938326587
+• Colecciones.hashCode() -660654448
+
+Luego se transforma el hash, para mejor distribución, calculando el indice siendo igual a el hash % tamañoTabla
+    (El tamaño de la tabla por defecto es 16)
+• Hola.hashCode() → 2324737 % 15 = 1
+• HolaMundo.hashCode() → -2124189365 % 15 = 3
+• HashMap.hashCode() -938326587 % 15 = 5
+• Colecciones.hashCode() -660654448 % 15 = 0
+
+
+
+
+Quedando asi, una vez insertado:
+table (buckets):
+
+[0] → "Colecciones"
+[1] → "Hola"
+[2] → null
+[3] → "HolaMundo"
+[4] → null
+[5] → "HashMap"
+[6] → null
+[7] → null
+[8] → null
+[9] → null
+[10]→ null
+[11]→ null
+[12]→ null
+[13]→ null
+[14]→ null
+[15]→ null

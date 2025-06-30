@@ -1,0 +1,9 @@
+4. Describe las estructuras de datos utilizadas para la implementación de KRUSKAL y analiza / investiga el orden
+del tiempo de ejecución del algoritmo que has desarrollado.
+Como estrcturas use Conjuntos, para los componenetes Conexos y use Listas para almacenar las Aristas
+El orden de ejecución es de O(n*2) , la implementacion mejor seria la del libro, con los metodos auxiliares
+y la cola de prioridad quedando en  O( a log a) las operaciones que realiza
+5. ¿puedes encontrar otras alternativas de implementación mejores?
+Lo respondi arriba
+6. ¿cuán importante es el consumo de memoria asociado?
+Si el grafo fuera mas grande importaria más , en este caso al no tener que procesar tanto no lo es.

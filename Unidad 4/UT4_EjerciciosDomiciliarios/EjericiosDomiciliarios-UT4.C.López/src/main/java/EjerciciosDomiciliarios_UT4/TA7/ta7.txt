@@ -1,0 +1,78 @@
+Ejercicio 1)
+
+        4
+      /   \
+     3     6
+    /     / \
+   1     5   7
+  /
+ 2
+
+De tipo entero TipoElementoAB.algoritmoUno()
+Comienzo
+x  -1; y  -1;
+Si hijoIzquierdo <> nulo entonces
+hijoIzquierdo.algoritmoUno()
+fin si
+Si hijoDerecho <> nulo entonces
+hijoDerecho.algoritmoUno()
+fin si
+devolver máximo (x+1, y+1)
+Fin
+Resultado: 3
+
+Ejercicio 2)
+
+De tipo entero TipoElementoAB.algoritmoUno()
+Comienzo
+x  0; y  0;
+Si (hijoIzquierdo = nulo y hijoDerecho = nulo) entonces
+Devolver 0
+Fin si
+Si hijoIzquierdo <> nulo entonces
+x hijoIzquierdo.algoritmoDos()
+fin si
+Si hijoDerecho <> nulo entonces
+y  hijoDerecho.algoritmoDos()
+fin si
+devolver x+y+1
+Fin
+
+Resultado: 4
+
+Ejercicio 3)
+De tipo entero TipoElementoAB.algoritmoTres()
+Comienzo
+x  0; y  0;
+Si hijoIzquierdo <> nulo entonces
+x hijoIzquierdo.algoritmoTres()
+fin si
+Si hijoDerecho <> nulo entonces
+y  hijoDerecho.algoritmoTres()
+fin si
+devolver x + y + (entero)etiqueta
+Fin
+
+Resultado: 28
+
+Ejercicio 4)
+De tipo entero TipoElementoAB.algoritmoCuatro(comparable unaEti)
+Comienzo
+A  0
+Si unaEti < etiqueta entonces
+Si hijoIzq <> nulo entonces
+A  hijoIzq. algoritmoCuatro (unaEti)
+Finsi
+Finsi
+Si unaEti > etiqueta entonces
+Si hijoDer <> nulo entonces
+A  hijoDer. algoritmoCuatro (unaEti)
+Finsi
+Finsi
+Si unaEti = etiqueta entonces
+A  1
+Finsi
+Devolver A
+Fin
+
+Resultado con unaEti = 1:

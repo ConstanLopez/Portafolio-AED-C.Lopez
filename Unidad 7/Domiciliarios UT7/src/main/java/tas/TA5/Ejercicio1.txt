@@ -1,0 +1,7 @@
+1. Describe en lenguaje natural el algoritmo que es necesario desarrollar para satisfacer ese requerimiento
+(listar o imprimir todos los itinerarios que se puedan dar, entre una cierta ciudad origen y una ciudad destino).
+
+1) Para satisfacer este requerimiento, podríamos implementar el algoritmo de todos los caminos que utiliza el algoritmo
+de búsqueda en profundidad; a medida que voy recorriendo los vértices busco todos los caminos posibles, una vez que los
+conseguí marco la adyacencia más próxima al origen como visitada y vuelvo a llamar al método; el cual va a realizar
+lo mismo pero sin tener en cuenta a la adyacencia más próxima visitada anteriormente.

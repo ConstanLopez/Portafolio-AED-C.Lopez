@@ -1,0 +1,41 @@
+Ejercicio 1
+
+Algoritmo ImprimirExpresion(nodo)
+    Si (nodo.tieneHijoIzquierdo) entonces
+        imprimir "("
+        ImprimirExpresion(nodo.hijoIzquierdo)
+    Fin Si
+    imprimir nodo.elemento
+
+    Si (nodo.tieneHijoDerecho) entonces
+        imprimirExpresion(nodo.hijoDerecho)
+        imprimir ")"
+    Fin Si
+Fin
+
+Algoritmo evaluarExpresion(nodo)
+    Si ( nodo es hoja) entonces
+        devolver elemento
+    Sino
+        x ← evaluarExpresion(nodo.hijoIzquierdo)
+        y ← evaluarExpresion(nodo.hijoDerecho)
+        operadorContenido ← nodo.elemento
+
+    devolver aplicarOperacion(operadorContenido, x, y)
+
+Ejercicio 2
+
+Algoritmo aplicarOperacion(operadorContenido, x, y)
+    Si operadorContenido = "+"
+        devolver x + y
+    Fin Si
+    Si operadorContenido = "-"
+        devolver x - y
+    Fin Si
+    Si operadorContenido = "*"
+        devolver x * y
+    Fin Si
+    Si operadorContenido = "/"
+        devolver x / y
+    Fin Si
+Fin
